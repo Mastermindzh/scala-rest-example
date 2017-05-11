@@ -1,0 +1,5 @@
+# Files / folders which map these values won't be added to git
+
+project/project
+target
+/.idea

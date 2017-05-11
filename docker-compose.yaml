@@ -1,0 +1,15 @@
+version: '2'
+volumes:
+    bin:
+services:
+  integration-service:
+    container_name: scala-sbt
+    image: "mastermindzh/scala-sbt"
+    volumes:
+      - "./:/opt/project"
+    ports:
+      - "9003:9003"
+    command: ["make", "run"]
+    environment:
+      - "ENV=docker"
+    tty: true
